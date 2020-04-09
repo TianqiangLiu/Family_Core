@@ -1,0 +1,13 @@
+package com.family.demo.service;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+import com.family.demo.domain.Event;
+import com.family.demo.dto.CalendarEvent;
+
+public interface EventService {
+	ArrayList<CalendarEvent> findbyAccountIdAndDate(Long accountId,Date date);
+	Event save(Event event);
+
+}

@@ -1,0 +1,5 @@
+package com.family.demo.dto;
+
+public class CalendarEventByDate {
+
+}

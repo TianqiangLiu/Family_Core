@@ -1,0 +1,5 @@
+package com.family.demo.domain;
+
+public class User {
+
+}

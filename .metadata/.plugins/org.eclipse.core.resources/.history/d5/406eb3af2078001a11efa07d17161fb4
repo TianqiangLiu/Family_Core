@@ -1,0 +1,5 @@
+package com.family.demo.service;
+
+public interface MoneyNoteService {
+
+}

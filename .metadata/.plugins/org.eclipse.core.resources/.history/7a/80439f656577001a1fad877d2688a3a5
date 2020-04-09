@@ -1,0 +1,26 @@
+package com.family.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.family.demo.service.UserService;
+
+public class UserController {
+	
+	@Autowired 
+	private UserService userService;
+	
+	
+    @RequestMapping(value="/api/login",method=RequestMethod.GET)
+    public String hello2(
+    		@RequestParam(name = "username", required = true) String userName,
+    		@RequestParam(name = "password", required = true) String password
+    		){
+    	
+    	
+        return userService.findByUserName(userName);
+    }
+
+}

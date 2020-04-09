@@ -1,0 +1,9 @@
+package com.family.demo.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.family.demo.domain.MoneyNote;
+
+public interface MoneyNoteRepository extends JpaRepository<MoneyNote,Long> {
+
+}

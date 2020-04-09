@@ -1,0 +1,10 @@
+package com.family.demo.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.family.demo.domain.User;
+
+
+public class UserRepository extends JpaRepository<User, Long>{
+
+}

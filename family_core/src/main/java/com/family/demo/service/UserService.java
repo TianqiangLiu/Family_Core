@@ -1,0 +1,15 @@
+package com.family.demo.service;
+
+import org.springframework.social.ResourceNotFoundException;
+
+import com.family.demo.domain.User;
+
+public interface UserService {
+	User findById(Long id) throws ResourceNotFoundException;
+	
+	User findByUserName(String userName);
+	
+	User save(User user);
+	
+	User changeUSer(User user);
+}

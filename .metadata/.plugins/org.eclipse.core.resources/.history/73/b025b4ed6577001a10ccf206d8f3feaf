@@ -1,0 +1,33 @@
+package com.family.demo;
+
+import java.util.ArrayList;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.alibaba.fastjson.JSON;
+
+@RestController
+public class HelloController {
+    @RequestMapping(value="/test",method=RequestMethod.GET)
+    public String hello(){
+    	ArrayList<String> arr= new ArrayList<String>();
+    	arr.add("Hello SpringBoot!");
+    	arr.add("Hello World!");
+        return JSON.toJSONString(arr);
+    }
+    @RequestMapping(value="/test1",method=RequestMethod.GET)
+    public String hello1(){
+        return "Hello SpringBootNumberONe"
+        		+ "1!";
+    }
+    
+    @RequestMapping(value="/test1",method=RequestMethod.GET)
+    public String hello2(){
+        return "Hello SpringBootNumberONe"
+        		+ "1!";
+    }
+    
+    
+}

@@ -1,0 +1,37 @@
+package com.family.demo.service;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.family.demo.domain.Event;
+import com.family.demo.dto.CalendarEvent;
+import com.family.demo.repository.EventRepository;
+
+@Service
+public class EventServiceImpl implements EventService{
+	
+	@Autowired
+	private EventRepository eventRepository;
+
+	@Override
+	public Event save(Event event) {
+		
+		return eventRepository.save(event);
+	}
+
+	@Override
+	public ArrayList<CalendarEvent> findbyAccountIdAndDate(Long accountId, String date) {
+		Date date2 = new Date(date);
+		System.out.println(date);
+		ArrayList<Event> arrayList = new ArrayList<Event>(eventRepository.findbyAccountIdAndDate(accountId, date2));
+		ArrayList<CalendarEvent> resultArrayList = new ArrayList<CalendarEvent>();
+//		for (int i = 0; i < arrayList.size(); i++) {
+//			resultArrayList.add(new CalendarEvent(arrayList.get(i).getType(), arrayList.get(i).getContent()));
+//		}
+		return resultArrayList;
+	}
+
+}

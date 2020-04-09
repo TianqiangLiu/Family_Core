@@ -1,0 +1,12 @@
+package com.family.demo.service;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+import com.family.demo.domain.Event;
+
+public interface EventService {
+	ArrayList<Event> findbyAccountIdAndDate(Long accountId,Date date);
+	Event save(Event event);
+
+}

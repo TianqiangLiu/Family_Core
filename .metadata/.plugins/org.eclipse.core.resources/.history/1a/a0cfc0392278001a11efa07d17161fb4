@@ -1,0 +1,10 @@
+package com.family.demo.service;
+
+import java.util.ArrayList;
+
+import com.family.demo.domain.MoneyNote;
+
+public interface MoneyNoteService {
+	ArrayList<MoneyNote> findbyAccountId(long accountId);
+
+}

@@ -1,0 +1,20 @@
+package com.family.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.social.ResourceNotFoundException;
+
+import com.family.demo.domain.User;
+import com.family.demo.repository.UserRepository;
+
+public class UserServiceImpl implements UserService{
+	
+	@Autowired
+	private UserRepository userRepository;
+
+	@Override
+	public User findById(Long id) throws ResourceNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

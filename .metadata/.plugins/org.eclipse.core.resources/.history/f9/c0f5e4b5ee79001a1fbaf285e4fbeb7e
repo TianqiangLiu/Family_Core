@@ -1,0 +1,15 @@
+package com.family.demo.repository;
+
+import java.util.ArrayList;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.family.demo.domain.Event;
+
+@Repository
+public interface EventRepository extends JpaRepository<Event,Long>{
+	
+	public ArrayList<Event> findbyAccountId(long accountId);
+
+}

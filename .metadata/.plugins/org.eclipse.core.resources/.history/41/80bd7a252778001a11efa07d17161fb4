@@ -1,0 +1,28 @@
+package com.family.demo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.family.demo.domain.MoneyNote;
+import com.family.demo.repository.MoneyNoteRepository;
+
+@Service
+public class MoneyNoteServiceImpl implements MoneyNoteService {
+	
+	@Autowired
+	private MoneyNoteRepository moneyNoteRepository;
+
+	@Override
+	public ArrayList<MoneyNote> findbyAccountId(long accountId) {
+		return new ArrayList<MoneyNote>(moneyNoteRepository.findbyAccountId(accountId));
+	}
+
+	@Override
+	public MoneyNote save(MoneyNote moneyNote) {
+		return moneyNoteRepository.save(moneyNote);
+	}
+
+}

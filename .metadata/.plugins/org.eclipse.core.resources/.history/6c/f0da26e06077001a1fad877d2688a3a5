@@ -1,0 +1,19 @@
+package com.family.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.family.demo.domain.User;
+import com.family.demo.repository.UserRepository;
+
+public class UserServiceImpl implements UserService{
+	
+	@Autowired
+	private UserRepository userRepository;
+
+	@Override
+	public User findById(Long id) {
+		
+		return userRepository.findById(id);
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.family.demo.repository;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.family.demo.domain.Event;
+
+@Repository
+public interface EventRepository extends JpaRepository<Event,Long>{
+	
+	@Query("select e from Event e where accountid = :accountid AND date = :date")
+	public List<Event> findbyAccountIdAndDate(@Param("accountid")Long accountId, @Param("date")Date date);
+
+	@Query("select e from Event e where accountid = :accountid")
+	public List<Event> findbyAccountId(@Param("accountid")Long accountId);
+}
