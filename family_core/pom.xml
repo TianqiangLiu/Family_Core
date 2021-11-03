@@ -176,7 +176,7 @@
 		 <dependency>
 			  <groupId>com.aliyun</groupId>
 			  <artifactId>aliyun-java-sdk-core</artifactId>
-    		  <version>4.5.14</version>
+    		  <version>4.5.28</version>
 			</dependency>
 		<!-- https://mvnrepository.com/artifact/com.aliyun.oss/aliyun-sdk-oss -->
 		<dependency>
